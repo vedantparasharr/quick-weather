@@ -1,3 +1,11 @@
+<!-- 
+  Weather App
+  File: index.html
+  Description: Main structure for the Weather App UI
+  Author: Vedant Parashar
+  Last Updated: Nov 2025
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +13,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
+
+  <!-- ===== STYLES ===== -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
@@ -12,7 +22,7 @@
 <body>
   <main class="weatherApp">
 
-    <!-- SEARCH BAR -->
+    <!-- ===== SEARCH BAR ===== -->
     <header class="searchBar">
       <input type="text" placeholder="Search City" class="searchBar__input">
       <button class="searchBar__btn">
@@ -20,30 +30,31 @@
       </button>
     </header>
 
-    <!-- WEATHER INFO -->
-    <section class="weatherInfo" style="display: none;">
 
-      <!-- LOCATION & DATE -->
+    <!-- ===== WEATHER INFO ===== -->
+    <section class="weatherInfo js-weather-info" style="display: none;">
+
+      <!-- Location & Date -->
       <div class="locationDate">
         <div class="location">
           <span class="material-symbols-outlined">location_on</span>
-          <h3 class="text--bold">Singapore</h2>
+          <h3 class="js-city text--bold">Singapore</h3>
         </div>
         <div class="date">
-          <h3 class="text--regular">Thu, 21 June</h3>
+          <h3 class="text--regular js-date">Thu, 21 June</h3>
         </div>
       </div>
 
-      <!-- CURRENT WEATHER -->
+      <!-- Current Weather -->
       <div class="weatherSummary">
-        <img src="assets/weather/clouds.svg" alt="clouds" class="weatherSummary__icon">
+        <img class="js-sky-img weatherSummary__icon" src="assets/weather/clouds.svg" alt="clouds">
         <div class="weatherSummary__text">
-          <h1 class="weatherSummary__temp text--bold">30 &deg;C</h1>
-          <h2 class="weatherSummary__type text--regular">Clouds</h2>
+          <h1 class="weatherSummary__temp text--bold js-temp">30 &deg;</h1>
+          <h2 class="weatherSummary__type text--regular js-sky-text">Clouds</h2>
         </div>
       </div>
 
-      <!-- CONDITIONS -->
+      <!-- Conditions -->
       <div class="weatherConditions">
         <div class="weatherConditions__info">
 
@@ -51,7 +62,7 @@
             <span class="material-symbols-outlined">water_drop</span>
             <div class="weatherConditions__text">
               <h3 class="text--regular">Humidity</h3>
-              <h3 class="text--bold">74%</h3>
+              <h3 class="text--bold js-humidity">74%</h3>
             </div>
           </div>
 
@@ -59,14 +70,14 @@
             <span class="material-symbols-outlined">air</span>
             <div class="weatherConditions__text">
               <h3 class="text--regular">Wind Speed</h3>
-              <h3 class="text--bold">4.12 M/s</h3>
+              <h3 class="text--bold js-wind-speed">4.12 M/s</h3>
             </div>
           </div>
 
         </div>
       </div>
 
-      <!-- FORECAST -->
+      <!-- Forecast -->
       <div class="forecastList">
         <div class="forecastCard">
           <h4 class="forecastCard__date text--regular">Aug 09</h4>
@@ -101,28 +112,34 @@
       </div>
     </section>
 
-    <!-- SEARCH CITY -->
-    <section class="searchCity section-message">
+
+    <!-- ===== SEARCH CITY ===== -->
+    <section class="searchCity js-search-city section-message" style="display: flex">
       <img src="assets/message/search-city.png" alt="search city">
       <div>
         <h2 class="text--bold">Search City</h2>
-        <h4 class="text--regular">Find out the weather conditions of the city</h3>
+        <h4 class="text--regular">Find out the weather conditions of the city</h4>
       </div>
       <button class="searchCity__locationBtn">
         <span class="material-symbols-outlined">my_location</span>
-        <h4 class="text--bold">Use My Location</h3>
+        <h4 class="text--bold">Use My Location</h4>
       </button>
     </section>
-    <!-- /SEARCH CITY -->
 
-    <section class="notFound section-message" style="display: none;">
+
+    <!-- ===== NOT FOUND ===== -->
+    <section class="notFound js-not-found section-message" style="display: none;">
       <img src="assets/message/not-found.png" alt="search city">
       <div>
         <h2 class="text--bold">Search City</h2>
-        <h4 class="text--regular">Find out the weather conditions of the city</h3>
+        <h4 class="text--regular">Find out the weather conditions of the city</h4>
       </div>
     </section>
 
   </main>
+
+  <!-- ===== SCRIPT ===== -->
+  <script type="module" src="script.js"></script>
+
 </body>
 </html>

@@ -34,10 +34,10 @@ body::before {
   backdrop-filter: blur(15px);
 }
 
-/* ============================================
-   TEXT UTILITIES (Professional Typography)
-   ============================================ */
 
+/* ============================================
+   TEXT UTILITIES
+   ============================================ */
 .text--regular {
   font-weight: 400;
 }
@@ -54,15 +54,17 @@ body::before {
   flex-direction: column;
   height: 496px;
   width: 300px;
+  padding: 20px;
+  border-radius: 12px;
   z-index: 1;
+
   background: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.15));
   backdrop-filter: blur(100px);
-  border-radius: 12px;
-  padding: 20px;
   box-shadow:
     0 4px 20px rgba(0, 0, 0, 0.2),
     inset 0 2px 8px rgba(255, 255, 255, 0.1);
 }
+
 
 /* ============================================
    SEARCH BAR
@@ -79,8 +81,8 @@ body::before {
   border-radius: 99px;
   border: 3px solid transparent;
   background: rgba(0, 0, 0, 0.15);
-  outline: none;
   font-weight: 500;
+  outline: none;
   transition: border 0.25s ease;
 }
 
@@ -117,7 +119,7 @@ body::before {
 
 
 /* ============================================
-   WEATHER INFO CONTAINER
+   WEATHER INFO
    ============================================ */
 .weatherInfo {
   display: flex;
@@ -141,6 +143,7 @@ body::before {
   gap: 6px;
 }
 
+
 /* ============================================
    WEATHER SUMMARY
    ============================================ */
@@ -157,6 +160,7 @@ body::before {
   text-align: end;
   font-size: 20px;
 }
+
 
 /* ============================================
    WEATHER CONDITIONS
@@ -179,15 +183,16 @@ body::before {
   font-size: 13.28px;
 }
 
+
 /* ============================================
    FORECAST SECTION
    ============================================ */
 .forecastList {
   display: flex;
   gap: 15px;
+  padding-bottom: 12px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding-bottom: 12px;
 }
 
 .forecastList::-webkit-scrollbar {
@@ -227,15 +232,15 @@ body::before {
 
 
 /* ============================================
-   SEARCH CITY & NOT FOUND ERROR SECTION
+   SEARCH CITY / NOT FOUND
    ============================================ */
 .section-message {
-  align-items: center;
   display: flex;
-  height: 100%;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
   gap: 15px;
 }
 
@@ -250,13 +255,12 @@ body::before {
   justify-content: center;
   gap: 6px;
 
-  background: rgba(255, 255, 255, 0.1);
-  border: 3px solid transparent;
-  border-radius: 99px;
   padding: 4px 24px;
+  border-radius: 99px;
+  border: 3px solid transparent;
+  background: rgba(255, 255, 255, 0.1);
   cursor: pointer;
   transition: all 0.25s ease;
-  box-shadow: none;
   backdrop-filter: blur(8px);
 }
 
@@ -271,4 +275,3 @@ body::before {
 .searchCity__locationBtn:active {
   background: rgba(255, 255, 255, 0.1);
 }
-
